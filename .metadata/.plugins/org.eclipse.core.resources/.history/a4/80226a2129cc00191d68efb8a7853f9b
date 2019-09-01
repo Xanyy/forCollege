@@ -1,0 +1,24 @@
+package Model;
+
+public class Manager extends Person {
+	
+	int starRating;
+	
+	
+	Manager(String firstName, String middleName, String lastName, String phone, String email, int starRating) {
+		super(firstName, middleName, lastName, phone, email);
+		this.starRating = starRating;
+	}
+
+	
+	public int getStarRating() {
+		return starRating;
+	}
+
+	public void setStarRating(int starRating) {
+		this.starRating = starRating;
+	}
+	
+	
+
+}

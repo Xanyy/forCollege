@@ -1,0 +1,24 @@
+package Model;
+
+public class Player extends Person {
+	
+	private int goals;
+	boolean goalie = false;
+	
+	
+	public int getGoals() {
+		return goals;
+	}
+	public void setGoals(int goals) {
+		this.goals = goals;
+	}
+	public boolean isGoalie() {
+		return goalie;
+	}
+	public void setGoalie(boolean goalie) {
+		this.goalie = goalie;
+	}
+	
+	
+
+}

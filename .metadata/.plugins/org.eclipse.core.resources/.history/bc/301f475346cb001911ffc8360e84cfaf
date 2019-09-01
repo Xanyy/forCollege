@@ -1,0 +1,11 @@
+package Model;
+
+public class Team extends Player {
+	String manager, jerseyColour;
+	Object Player;
+	
+	
+	
+	
+	
+}

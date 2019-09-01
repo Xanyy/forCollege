@@ -1,0 +1,12 @@
+package Model;
+
+public class Team extends Player {
+	String manager, jerseyColour;
+	Object Players;
+	
+	public Team(String firstName,String middleName, String lastName, String phone, String email) {
+		super(firstName, middleName, lastName, email, phone);
+	}
+	
+	
+}

@@ -1,0 +1,26 @@
+package Model;
+
+public class Player extends Person {
+	
+	private int goals;
+	boolean goalie = false;
+	
+	public Player(String firstName, String middleName, String lastName, String email, String phone) {
+		// TODO Auto-generated constructor stub
+	}
+	public int getGoals() {
+		return goals;
+	}
+	public void setGoals(int goals) {
+		this.goals = goals;
+	}
+	public boolean isGoalie() {
+		return goalie;
+	}
+	public void setGoalie(boolean goalie) {
+		this.goalie = goalie;
+	}
+	
+	
+
+}

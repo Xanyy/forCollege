@@ -1,0 +1,42 @@
+package Tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+import Model.Player;
+
+public class PlayerTest {
+
+
+	Player p1,p2;
+	//@Before
+	public void setUp() throws Exception {
+
+		p1 = new Player("Ivan", " Paul", "O'Brien", "ivan@mycit.ie", "12345775", 5, false);
+		p2 = new Player("Hamza", " joe", "Asif", "hamza@mycit.ie", "3264184", 5, false);
+
+	}
+
+	//@Test
+	public void test() {
+		assertTrue("Cannot be null", (p1.getfName()!=null));
+		assertTrue("Cannot be null", (p2.getfName()!=null));
+
+		assertTrue("Can be blank or filled", ((s1.getmName()) == null ||(s1.getmName()) !=null));
+		assertTrue("Can be blank or filled", ((s2.getmName()) == null ||(s2.getmName()) !=null));
+
+		assertTrue("Cannot be null", (s1.getlName())!=null);
+		assertTrue("Cannot be null", (s2.getlName())!=null);
+
+		assertTrue("Cannot be null", (s1.geteMail())!=null);		
+		assertTrue("Cannot be null", (s2.geteMail())!=null);
+
+		assertTrue("Cannot be null", (s1.getPhoneNumber())!=null);
+		assertTrue("Cannot be null", (s2.getPhoneNumber())!=null);
+
+		assertTrue("Cannot be null", (s1.getDateOfBirth())!=null);
+		assertTrue("Cannot be null", (s2.getDateOfBirth())!=null);
+	}
+
+}

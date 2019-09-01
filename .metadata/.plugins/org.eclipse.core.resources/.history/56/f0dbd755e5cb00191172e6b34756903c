@@ -1,0 +1,62 @@
+
+package Controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class Delete {
+	
+	
+	public static void removePlayer(Connection conn, String sName, String sEmail, int sGoals){
+
+		if (conn != null){
+			PreparedStatement removePlayer;
+			try{
+				removePlayer = conn.prepareCall("DELETE FROM player where FName = ? AND EMaill = ?");	
+				removePlayer.setString(1,  sName);
+				removePlayer.setString(2,  sEmail);
+				removePlayer.setInt(3,  sGoals);
+				int i= removePlayer.executeUpdate();
+
+			}catch (SQLException e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+	
+	public static void removeClass(Connection conn, String classID){
+
+		if (conn != null){
+			PreparedStatement removeClass;
+			try{
+				removeClass = conn.prepareCall("DELETE FROM class where classNumber= ?");	
+				removeClass.setString(1,  classID);
+				int i= removeClass.executeUpdate();
+
+			}catch (SQLException e){
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	public static void removeTeacher(Connection conn, String tName, String tEmail){
+
+		if (conn != null){
+			PreparedStatement removeClass;
+			try{
+				removeClass = conn.prepareCall("DELETE FROM teacher where FName = ? AND EMaill = ?");	
+				removeClass.setString(1,  tName);
+				removeClass.setString(2,  tEmail);
+				int i= removeClass.executeUpdate();
+				
+			}catch (SQLException e){
+				e.printStackTrace();
+			}
+		}
+	}
+}
